@@ -6,7 +6,7 @@ import plotly.express as px
 API = "http://localhost:5000"
 
 st.set_page_config(page_title="DevSecOps Security Analytics", layout="wide")
-st.title("🔐 DevSecOps Security Analytics Dashboard")
+st.title("DevSecOps Security Analytics Dashboard")
 
 # -----------------------------
 # Fetch Summary Metrics
@@ -14,7 +14,7 @@ st.title("🔐 DevSecOps Security Analytics Dashboard")
 try:
     summary = requests.get(f"{API}/summary").json()
 except:
-    st.error("⚠️ Could not fetch API data. Make sure Flask API is running on localhost:5000")
+    st.error("Could not fetch API data. Make sure Flask API is running on localhost:5000")
     st.stop()
 
 # -----------------------------
